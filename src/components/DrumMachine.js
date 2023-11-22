@@ -53,11 +53,11 @@ export default function DrumMachine() {
                 <button className="switch-btn" onClick={switchDrum}>Power {state.switch ? <i className="fa fa-2x fa-toggle-on"></i> : <i className="fa fa-2x fa-toggle-off"></i>}</button>
                 <p className="drum-desc">{state.switch && state.desc}</p>
                 <div className="volume-slider">
-                    <label for="volumeRange">Volume</label>
+                    <label htmlFor="volumeRange">Volume</label>
                     <input type="range" min="0" max="1" step="0.1" value={state.volume} onChange={setVolume} id="volumeRange"></input>
                 </div>
             </div>
-            <p className="creator">By <a href="https://github.com/srky420">Shahrukh</a></p>
+            <p className="creator">By <a href="https://github.com/srky420" target="_blank">Shahrukh</a></p>
         </div>
     );
 }

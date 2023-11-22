@@ -30,10 +30,11 @@ export const DrumPad = (props) => {
     const playAudio = () => {
         const audio = audioElement.current;
         if (props.state.switch) {
-            audio.pause();
-            audio.currentTime = 0;
+            if (audio.currentTime > 0) {
+                audio.currentTime = 0;
+            }
             audio.volume = props.state.volume;
-            audio.play();
+            audio.play().catch(err => console.log(err));
             props.setDisplay(props.desc);
         }
     }
