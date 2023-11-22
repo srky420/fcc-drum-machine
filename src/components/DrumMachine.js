@@ -54,7 +54,7 @@ export default function DrumMachine() {
                 <p className="drum-desc">{state.switch && state.desc}</p>
                 <div className="volume-slider">
                     <label htmlFor="volumeRange">Volume</label>
-                    <input type="range" min="0" max="1" step="0.1" value={state.volume} onChange={setVolume} id="volumeRange"></input>
+                    <input type="range" min="0" max="1" step="0.1" value={state.volume} onChange={setVolume} id="volumeRange" />
                 </div>
             </div>
             <p className="creator">By <a href="https://github.com/srky420" target="_blank">Shahrukh</a></p>

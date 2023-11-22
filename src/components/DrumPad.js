@@ -9,20 +9,20 @@ export const DrumPad = (props) => {
 
     // Effect hook for adding event to document
     useEffect(() => {
-        document.addEventListener('keydown', handleKeyDown)
+        document.addEventListener('keydown', handleKeyDown);
         // Clenup
         return () => {
             document.removeEventListener('keydown', handleKeyDown);
         }
     }, []);
 
-    function handleKeyDown(e) {
+    const handleKeyDown = (e) => {
         if (e.key.toUpperCase() === props.keyName && props.state.switch) {
             buttonElement.current.click();
             buttonElement.current.classList.add('drum-pad-active');
             setTimeout(() => {
                 buttonElement.current.classList.remove('drum-pad-active');
-            }, 100)
+            }, 100);
         }
     }
 
